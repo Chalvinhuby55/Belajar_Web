@@ -7,8 +7,7 @@
 #banner {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5)),
-    url(/Belajar_Web/GAMBAR/bg.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(/GAMBAR/bg.webp);
   background-size: cover;
   background-position: center;
 }
@@ -47,7 +46,7 @@ button:hover {
   background: transparent;
 }
 button #sideMenu,
-#closeMenu {
+#closeMenu .services {
   cursor: pointer;
 }
 .header {
@@ -71,7 +70,8 @@ button #sideMenu,
 }
 .logo,
 .navbar #list,
-.navbar #list li a {
+.navbar #list li a,
+.row {
   display: flex;
   align-items: center;
 }
@@ -113,6 +113,89 @@ button #sideMenu,
   left: 15px;
   z-index: 10;
 }
+#about,
+#services {
+  width: 100%;
+  padding: 100px 0;
+}
+.title {
+  width: fit-content;
+  color: #000000;
+  text-align: center;
+  margin: 0 auto 60px;
+  padding: 0 10px 10px;
+  border-bottom: 2px #000000;
+  position: relative;
+}
+.title::after {
+  content: "";
+  width: 40px;
+  height: 8px;
+  background: #ffff00;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50);
+  border-radius: 20px;
+}
+.row {
+  width: 85%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col-left,
+.col-right {
+  flex-basis: 50;
+}
+.content-image {
+  text-align: center;
+}
+.content-image img {
+  width: 90%;
+}
+.content {
+  margin-right: 50px;
+}
+h3 {
+  color: #000000;
+  margin-bottom: 30px;
+}
+.content h3 {
+  font-size: 30px;
+}
+p {
+  font-size: 12px;
+  line-height: 18px;
+}
+#services {
+  background: #f7f7f7;
+}
+.col {
+  flex-basis: 30%;
+  text-align: center;
+}
+.services {
+  border-radius: 5px;
+  padding: 20px 10px;
+  box-shadow: -10px 10px 20px 0px rgba(255, 4, 4, 0.1);
+  transition: 0.5s;
+}
+services .fa {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: #ffff00;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+  margin-bottom: 15px;
+}
+.services:hover {
+  transform: scale(1.05);
+}
+
 @media only screen and (max-width: 700px) {
   #sideMenu,
   #closeMenu {
@@ -138,4 +221,17 @@ button #sideMenu,
     font-size: 25px;
     line-height: 35px;
   }
+}
+.col-left,
+.col-right,
+.col {
+  flex-basis: 100;
+  text-align: center;
+}
+.content {
+  margin-right: 0px;
+  margin-bottom: 50px;
+}
+.col:nth-child(2) {
+  margin: 40px 0;
 }
